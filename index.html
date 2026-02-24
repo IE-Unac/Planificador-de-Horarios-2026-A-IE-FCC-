@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador de Horarios 2026-A - FCC</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>📚 Cursos por Ciclo</h2>
+            </div>
+
+            <div class="ciclos-container" id="ciclosContainer">
+                <!-- Se genera con JavaScript -->
+            </div>
+
+            <div class="actions-sidebar">
+                <button class="btn-small" onclick="guardarHorario()">💾 Guardar</button>
+                <button class="btn-small" onclick="exportarPDF()">📥 PDF</button>
+                <button class="btn-small" onclick="limpiarHorario()">🗑️ Limpiar</button>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- HEADER -->
+            <header class="header-main">
+                <div class="header-info">
+                    <h1>📅 Mi Horario 2026-A</h1>
+                    <p>Facultad de Ciencias Contables - Integración Estudiantil</p>
+                </div>
+            </header>
+
+            <!-- GRID DE HORARIO -->
+            <div class="horario-container">
+                <div class="horario-grid" id="horarioGrid">
+                    <!-- Se genera con JavaScript -->
+                </div>
+            </div>
+
+            <!-- CURSOS SELECCIONADOS -->
+            <div class="selected-container">
+                <h3>📚 Cursos Seleccionados</h3>
+                <div class="selected-courses" id="selectedCourses">
+                    <p class="empty-msg">Selecciona cursos para ver aquí</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
